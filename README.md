@@ -1,3 +1,4 @@
-# Gene2Vec
+# Gene2vec
 Vector space representation of genetic data. 
-Nothing to see here (yet!)
+
+[Project Page](https://davidcox143.github.io/Gene2vec/)
