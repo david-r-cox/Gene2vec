@@ -3,7 +3,7 @@ Vector space representation of genetic data.
 
 [Project Page](https://davidcox143.github.io/Gene2vec/)
 
-```python
+```
         AAAAATAGTATAAAAAGTTGCCAAAAG
 (11/27) ||||| |    | |||   |         
         AAAAACATGCAACAAACAGGAACTGGC 
