@@ -1,6 +1,6 @@
 # Gene2vec: Neural word embeddigs of genetic data
 
-## Update 1:
+## Preliminary Results
 Finding the optimal way to represent nucleotide data as “words” has proven to be the most challenging issue of the project.
 
 Long nucleotide sequences (several hundred base pairs) often result in training data that contains no duplicate “words”. While it would be ideal to consider genes as words, Word2vec performs very poorly when each word is only used once. Not having any “context” for these long words prevents the construction of useful models. 
@@ -11,9 +11,6 @@ Traditional genetic similarity evaluation is done through common substring analy
 
 The following snippet contains sequences from two clusters. Note that the Triticum aestivum and Ovis canadensis samples have better alignment than those from the Triticum aestivum cluster. This is a significant find as traditional similarity analysis would have failed here. 
 
-
-
-## Preliminary Results
 
 ```
         AAAAATAGTATAAAAAGTTGCCAAAAG ->  Triticum aestivum chromosome 3B
