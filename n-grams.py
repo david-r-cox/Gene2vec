@@ -27,11 +27,12 @@ def main():
     argcheck()
     path = lambda x : argv[1] + '/' + x
     read = lambda x : ''.join(open(x, 'r').read().split()).upper()
+    insert_space = lambda x,n :  ' '.join([x[i:i+n] for i in xrange(0, len(x), n)])
 
     for f in listdir(argv[1]):
         data = read(path(f))
-        for n in window(data):
-            print n,
+        print insert_space(data, WINDOW_SIZE),
+        #for n in window(data): print n,
 
 
 if __name__ == "__main__":
