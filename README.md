@@ -9,7 +9,7 @@ Shorter sequences also proved to be problematic. While there was much more conte
 
 Traditional genetic similarity evaluation is done through common substring analysis. Using 260905 27-grams, we were able to successfully generate 500 distinct clusters. Most notably, we observed that the contents of clusters was not determined by substring similarity, meaning Word2vec was successful in modeling our training data.
 
-The following snippet contains sequences from two clusters. Note that the Triticum aestivum and Ovis canadensis samples have better alignment than those from the Triticum aestivum cluster. This is a significant find as traditional similarity analysis would have failed here. 
+The following snippet contains sequences from two clusters. Note that the [Triticum aestivum](https://en.wikipedia.org/wiki/Common_wheat) and [Ovis canadensis](https://en.wikipedia.org/wiki/Bighorn_sheep) samples have better alignment than those from the Triticum aestivum cluster. This is a significant find as traditional similarity analysis would have failed here. 
 
 
 ```
@@ -21,4 +21,5 @@ The following snippet contains sequences from two clusters. Note that the Tritic
 (14/27) |||||||||  |  |  |   |  |    
         AAAAACAGAGACATTACTTTGCCAACA ->  Ovis canadensis canadensis isolate 43U chromosome 26 
 ```
+
 [Project Page](https://davidcox143.github.io/Gene2vec/)
