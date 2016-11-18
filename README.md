@@ -5,4 +5,4 @@ Gene2vec is an adaptation of the Word2vec model that aims to construct quasi-syn
 
 We demonstrate the successful construction of such relationships from amino acid sequences by using them to perform some rudimentary protein classification.
 
-See the [report](https://github.com/davidcox143/Gene2vec/blob/master/report/Gene2vec.ipynb) for more info. 
+See the [report](https://nbviewer.ipython.org/github/davidcox143/Gene2vec/blob/master/report/Gene2vec.ipynb) for more info. 
