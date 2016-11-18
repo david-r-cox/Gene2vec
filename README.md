@@ -1,25 +1,8 @@
 # Gene2vec: Neural word embeddigs of genetic data
 
-## Preliminary Results
-Finding the optimal way to represent nucleotide data as “words” has proven to be the most challenging issue of the project.
+## Overview
+Gene2vec is an adaptation of the Word2vec model that aims to construct quasi-syntactic and semantic relationships from amino acid sequence data. Word2vec is an extension upon the continuous Skip-gram model that allows for precise representation of semantic and syntactic word relationships. Additionally, Word2vec representations exhibit additive composability such that vector arithmetic can be performed on words. Mikolov et al. illustrate this behavior by noting that the resulting vector space representation of ("Madrid" - "Spain" + "France") is closer to that of "Paris" than any other word.
 
-Long nucleotide sequences (several hundred base pairs) often result in training data that contains no duplicate “words”. While it would be ideal to consider genes as words, Word2vec performs very poorly when each word is only used once. Not having any “context” for these long words prevents the construction of useful models. 
+We demonstrate the successful construction of such relationships from amino acid sequences by using them to perform some rudimentary protein classification.
 
-Shorter sequences also proved to be problematic. While there was much more context for Word2vec to pull from, we found that short sequences produced meaningless results -- sequences such as AAAAT, AAAGTT, etc are extremely common. We are currently settling for an uncomfortable middle ground of 27 bp sequences. 
-
-Traditional genetic similarity evaluation is done through common substring analysis. Using 260905 27-grams, we were able to successfully generate 500 distinct clusters. Most notably, we observed that the contents of clusters was not determined by substring similarity, meaning Word2vec was successful in modeling our training data.
-
-The following snippet contains sequences from two clusters. Note that the [Triticum aestivum](https://en.wikipedia.org/wiki/Common_wheat) and [Ovis canadensis](https://en.wikipedia.org/wiki/Bighorn_sheep) samples have better alignment than those from the Triticum aestivum cluster. This is a significant find as traditional similarity analysis would have failed here. 
-
-
-```
-        AAAAATAGTATAAAAAGTTGCCAAAAG ->  Triticum aestivum chromosome 3B
-(11/27) ||||| |    | |||   |         
-        AAAAACATGCAACAAACAGGAACTGGC ->  Triticum aestivum chromosome 3B
-(10/27) |||||||          |  |     |  
-        AAAAACAGAATCTGTCTAAAACAGAAC ->  Triticum aestivum chromosome 3B 
-(14/27) |||||||||  |  |  |   |  |    
-        AAAAACAGAGACATTACTTTGCCAACA ->  Ovis canadensis canadensis isolate 43U chromosome 26 
-```
-
-[Project Page](https://davidcox143.github.io/Gene2vec/)
+See the [report](https://github.com/davidcox143/Gene2vec/blob/master/jupyter-nb/Gene2vec.ipynb) for more info. 
